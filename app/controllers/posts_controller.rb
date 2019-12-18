@@ -14,9 +14,9 @@ class PostsController < ApplicationController
   def create
     @post = Post.create(post_params)
     if @post.save
-      render :new
-    else
       redirect_to posts_path
+    else
+      render :new
   end
 
   def edit
